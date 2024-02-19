@@ -1,0 +1,25 @@
+@import '@sass/variables';
+
+.header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 64px 0;
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    text-decoration: none;
+    list-style: none;
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
