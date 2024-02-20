@@ -1,1 +1,9 @@
-@import 'variables', 'font.mixins', 'fonts', 'normalize';
+@import 'variables', 'font.mixins', 'normalize';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+body {
+  color: $Gray;
+  font-family: "FiraCode", monospace;
+
+  background-color: $BG;
+}

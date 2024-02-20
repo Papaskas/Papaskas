@@ -188,6 +188,12 @@ select { /* 1 */
   text-transform: none;
 }
 
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
