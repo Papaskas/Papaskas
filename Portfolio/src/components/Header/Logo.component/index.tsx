@@ -1,13 +1,14 @@
 import React from 'react';
 import css from './style.module.scss';
+import { Link } from 'react-router-dom';
 
 
 function Index() {
   return (
-    <div className={ css.logo }>
-      <img src="" alt="" className={ css.logo__icon }  />
-      <p className={ css.logo__title }></p>
-    </div>
+    <Link to="/" className={ css.logo }>
+      <img alt="papaska logo" className={ css.logo__icon }  />
+      <p className={ css.logo__title }>Papaska</p>
+    </Link>
   );
 }
 

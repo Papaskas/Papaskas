@@ -1,7 +1,8 @@
 @import '@sass/variables';
 
 .container {
-  width: 100%;
+  padding: 0 15px;
+  width: calc(100% - 30px); // width - padding
   margin: auto;
 
   @media (min-width: $md) { max-width: $md; }

@@ -1,0 +1,27 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.sign {
+  color: $Primary;
+}
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    &_item {
+      list-style: none;
+    }
+
+    &_item_link {
+      color: $Gray;
+      text-decoration: none !important;
+      transition: color 250ms ease-in-out;
+
+      &:hover {
+        color: $Secondary;
+      }
+    }
+  }
+}

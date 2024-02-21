@@ -6,7 +6,7 @@
     background-color: rgba($Color, 0.3);
   }
 
-  &:active {
+  &:focus, &:active {
     background-color: rgba($Color, 0.3);
 
     &::before {
@@ -15,12 +15,13 @@
     }
   }
 
-  &:focus {
-    background-color: rgba($Color, 0.3);
+  &:disabled, &[disabled] {
+    border: 1px solid $Gray;
+    background-color: $Gray;
+    color: $Secondary;
 
     &::before {
-      content: '#';
-      color: $Color;
+      content: '';
     }
   }
 }
@@ -31,15 +32,21 @@
   cursor: pointer;
   transition: background-color 250ms;
 
-  &_variant {
+  &_secondary {
     border: 1px solid $Gray;
     color: $Gray;
     @include genPseudoBtn($Gray);
   }
 
-  &_default {
+  &_primary {
     border: 1px solid $Primary;
     color: $Secondary;
     @include genPseudoBtn($Primary);
+  }
+
+  &_error {
+    border: 1px solid $Error;
+    color: $Secondary;
+    @include genPseudoBtn($Error);
   }
 }

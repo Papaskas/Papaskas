@@ -1,12 +1,14 @@
 import React from 'react';
-import Button from '@src/components/Button';
+import Preview from '@src/pages/Home/sections/Preview';
+import Dropdown from '@src/components/Dropdown';
 
 
 function Index() {
   return (
-    <section>
-      <Button>Contact me !!</Button>
-    </section>
+    <>
+      <Preview />
+      <Dropdown />
+    </>
   );
 }
 
