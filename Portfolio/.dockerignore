@@ -3,3 +3,8 @@ Dockerfile
 README.md
 .gitignore
 /.idea
+/.git
+.editorconfig
+TODO.md
+makefile
+/build
