@@ -1,10 +1,13 @@
 import React from 'react';
+import Dropdown from '@src/components/Dropdown';
+
 
 function Index() {
   return (
-    <div>
-
-    </div>
+    <Dropdown title="Lang">
+      <div>RU</div>
+      <div>EN</div>
+    </Dropdown>
   );
 }
 

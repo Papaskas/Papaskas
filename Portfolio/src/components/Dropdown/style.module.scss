@@ -1,4 +1,43 @@
-.dropdown select option:after {
-    padding: 50px;
+@import '@sass/variables', '@sass/font.mixins';
 
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: $BG;
+    cursor: pointer;
+    @include p16sb;
+    color: $Gray;
+
+    &_active { color: $Secondary; }
+
+    img { transition: all 500ms ease-in-out; }
+    &__img_active { transform: rotate(0.5turn); }
+  }
+
+  &__item_wrapper {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid $Gray;
+
+    > * {
+      padding: 8px;
+      cursor: pointer;
+
+      &:hover, &:active, &:focus {
+        color: $Secondary;
+      }
+    }
+  }
+}
+
+.show {
+  display:block;
 }

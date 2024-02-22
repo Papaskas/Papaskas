@@ -1,12 +1,12 @@
 import React from 'react';
-import css from './style.module.scss';
+import Container from '@src/components/Container';
 
 
 function Index() {
   return (
-    <div>
-
-    </div>
+    <Container>
+      preview item
+    </Container>
   );
 }
 
