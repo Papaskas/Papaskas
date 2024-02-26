@@ -1,0 +1,34 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.section_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__title {
+      @include h32m;
+      text-transform: lowercase;
+      color: $Secondary;
+
+      &::before {
+        content: '#';
+        color: $Primary;
+      }
+    }
+    &__line {
+      width: 240px;
+      height: 1px;
+      background-color: $Primary;
+    }
+  }
+
+  &__link {
+    color: $Secondary;
+    text-decoration: none;
+  }
+}

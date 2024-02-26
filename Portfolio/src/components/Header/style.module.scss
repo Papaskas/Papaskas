@@ -4,11 +4,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 50px;
 
   &__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
+    display: none;
+
+    @media (min-width: $sm) {
+      //display: flex;
+      //align-items: center;
+      //justify-content: space-between;
+      //gap: 32px;
+    }
   }
+
+  &__nav_burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-content: flex-end;
+
+    > div:first-child {
+      height: 2px;
+      width: 24px;
+      background-color:  $Secondary;
+    }
+    > div:last-child {
+      height: 2px;
+      width: 15px;
+      background-color:  $Secondary;
+    }
+  }
+
+    //&::after {
+    //  content: " ";
+    //  height: 20px;
+    //  width: 15px;
+    //  background-color:  $Secondary;
+    //}
+
 }

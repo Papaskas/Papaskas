@@ -1,8 +1,8 @@
 import React from 'react';
 import css from './style.module.scss';
-import email from '@src/assets/icons/secondary32/Email.svg';
-import github from '@src/assets/icons/secondary32/Github.svg';
-import telegram from '@src/assets/icons/secondary32/Telegram.svg';
+import email from '@src/assets/icons/secondary/Email.svg';
+import github from '@src/assets/icons/secondary/Github.svg';
+import telegram from '@src/assets/icons/secondary/Telegram.svg';
 
 
 type TLink = {
