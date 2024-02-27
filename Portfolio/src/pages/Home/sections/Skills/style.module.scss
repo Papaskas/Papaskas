@@ -1,0 +1,72 @@
+@import '@sass/variables';
+
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__items {
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  &__background {
+    display: none;
+
+    &__logo {
+      width: 113px;
+      height: 113px;
+    }
+    &__cube_big {
+      border: 1px solid $Gray;
+      width: 85px;
+      height: 85px;
+    }
+    &__cube_small {
+      border: 1px solid $Gray;
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (min-width: $XL) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 100px;
+
+      &__box:nth-child(1) {
+        display: flex;
+        margin: 0 -50px -100px 0;
+
+        img {
+          width: 63px;
+        }
+      }
+      &__box:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+      &__box:nth-child(3) {
+        display: flex;
+        align-items: flex-start;
+      }
+      &__box:nth-child(4) {
+        display: flex;
+        align-items: flex-start;
+        margin: -50px 0 0 0;
+
+        img {
+          width: 63px;
+        }
+      }
+      &__box:nth-child(5) {
+        margin: 0 0 0 -50px;
+      }
+    }
+  }
+}

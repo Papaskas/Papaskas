@@ -1,0 +1,23 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+
+.page_heading {
+
+  &__title {
+    @include h32sb;
+    color: $Secondary;
+    margin: 0 0 14px 0;
+
+    &::before {
+      content: '/';
+      @include h32sb;
+      color: $Primary;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    @include p16r;
+    color: $Secondary;
+  }
+}

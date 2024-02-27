@@ -7,6 +7,7 @@ import {
 import MainLayout from '@src/components/Layouts/MainLayout';
 import Home from '@src/pages/Home';
 import NotFound from '@src/pages/NotFound';
+import AboutMe from '@src/pages/AboutMe';
 
 
 function Router () {
@@ -15,6 +16,7 @@ function Router () {
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="/about-me" element={<AboutMe />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

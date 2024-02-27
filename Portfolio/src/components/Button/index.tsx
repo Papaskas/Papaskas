@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import css from './style.module.scss';
 
 
@@ -9,8 +9,9 @@ interface IButton {
   variant?: 'primary' | 'secondary' | 'error';
   disabled?: boolean;
   name?: string;
+  forwardedRef?: RefObject<HTMLButtonElement>;
 }
-function Index({ children, onClick, type = 'button', variant = 'primary', disabled = false, name = '' }: Readonly<IButton>) {
+function Index({ children, onClick, type = 'button', variant = 'primary', disabled, name, forwardedRef }: Readonly<IButton>) {
   return (
     <button
       onClick={ onClick }
@@ -18,6 +19,7 @@ function Index({ children, onClick, type = 'button', variant = 'primary', disabl
       type={ type }
       disabled={ disabled }
       name={ name }
+      ref={ forwardedRef }
     >
       { children }
     </button>

@@ -3,32 +3,27 @@
 .section_heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 16px;
 
   &__title {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    @include h32m;
+    text-transform: lowercase;
+    color: $Secondary;
 
-    &__title {
-      @include h32m;
-      text-transform: lowercase;
-      color: $Secondary;
-
-      &::before {
-        content: '#';
-        color: $Primary;
-      }
+    &::before {
+      content: '#';
+      color: $Primary;
     }
-    &__line {
+  }
+
+  &__line {
+    display: none;
+
+    @media (min-width: $md) {
+      display: block;
       width: 240px;
       height: 1px;
       background-color: $Primary;
     }
-  }
-
-  &__link {
-    color: $Secondary;
-    text-decoration: none;
   }
 }
