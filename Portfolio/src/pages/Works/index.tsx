@@ -5,7 +5,7 @@ import PageHeading from '@src/components/PageHeading';
 function Index() {
   return (
     <main>
-      <PageHeading>about-me</PageHeading>
+      <PageHeading>Works</PageHeading>
     </main>
   );
 }

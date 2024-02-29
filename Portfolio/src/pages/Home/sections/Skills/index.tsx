@@ -36,10 +36,10 @@ function Index() {
           <div className={ css.skills__items }>
             <SkillComponent title="language">JavaScript Java PHP TypeScript Python</SkillComponent>
             <SkillComponent title="database">MySQL PostgreSQL MongoDB Redis SQLite</SkillComponent>
-            <SkillComponent title="frontend">Sass PixelPerfect Bootstrap Photoshop BEM Illustrator Figma</SkillComponent>
+            <SkillComponent title="frontend">Sass PixelPerfect Bootstrap Photoshop BEM Illustrator Figma MobileFirst</SkillComponent>
             <SkillComponent title="stack">React TypeScript Express MongoDB</SkillComponent>
             <SkillComponent title="frameworks">React Angular Laravel Django</SkillComponent>
-            <SkillComponent title="tools">Git Ubuntu Yarn SSH Docker</SkillComponent>
+            <SkillComponent title="tools">Git Ubuntu Bash Yarn SSH Docker Apache Nginx</SkillComponent>
           </div>
 
         </div>

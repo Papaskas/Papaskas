@@ -1,17 +1,15 @@
 import React from 'react';
-import css from './style.module.scss';
 import Container from '@src/components/Container';
+import css from './style.module.scss';
 
 
 type TPageHeading = {
   children: string;
-  description: string;
 }
-function Index({ children, description }: Readonly<TPageHeading>) {
+function Index({ children }: Readonly<TPageHeading>) {
   return (
-    <Container className={ css.page_heading }>
-      <h1 className={ css.page_heading__title }>{ children }</h1>
-      <p className={ css.page_heading__description }>{ description }</p>
+    <Container>
+      <h1 className={ css.page_heading }>{ children }</h1>
     </Container>
   );
 }

@@ -1,11 +1,13 @@
 import React from 'react';
 import PageHeading from '@src/components/PageHeading';
+import Preview from './sections/Preview';
 
 
 function Index() {
   return (
     <main>
-      <PageHeading>about-me</PageHeading>
+      <PageHeading>contacts</PageHeading>
+      <Preview />
     </main>
   );
 }

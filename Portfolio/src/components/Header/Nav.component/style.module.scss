@@ -4,24 +4,27 @@
   color: $Primary;
 }
 .nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0;
 
-  &__list {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  &__item {
+    list-style: none;
+    @include h32m;
 
-    &_item {
-      list-style: none;
+    @media(min-width: $lg) {
+      @include p16m;
     }
+  }
 
-    &_item_link {
-      color: $Gray;
-      text-decoration: none !important;
-      transition: color 250ms ease-in-out;
+  &__item_link {
+    color: $Gray;
+    text-decoration: none;
+    transition: color 250ms ease-in-out;
 
-      &:hover {
-        color: $Secondary;
-      }
+    &:hover {
+      color: $Secondary;
     }
   }
 }

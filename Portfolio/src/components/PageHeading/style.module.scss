@@ -2,22 +2,14 @@
 
 
 .page_heading {
+  @include h32sb;
+  color: $Secondary;
+  margin: 0 0 14px 0;
+  text-transform: lowercase;
 
-  &__title {
+  &::before {
+    content: '/';
     @include h32sb;
-    color: $Secondary;
-    margin: 0 0 14px 0;
-
-    &::before {
-      content: '/';
-      @include h32sb;
-      color: $Primary;
-    }
-  }
-
-  &__description {
-    margin: 0;
-    @include p16r;
-    color: $Secondary;
+    color: $Primary;
   }
 }

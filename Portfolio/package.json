@@ -9,9 +9,9 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
-    "@reduxjs/toolkit": "^2.2.1",
     "animate.css": "^4.1.1",
     "animate.css-react": "^1.1.0",
+    "animejs": "^3.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.2",
@@ -48,6 +48,7 @@
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
+    "@types/animejs": "^3.1.12",
     "@types/css-modules": "^1.0.5",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",

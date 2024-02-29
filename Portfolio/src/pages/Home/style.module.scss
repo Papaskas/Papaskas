@@ -3,5 +3,9 @@
 .home_page {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
+
+  @media (min-width: $md) {
+    gap: 100px;
+  }
 }

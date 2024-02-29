@@ -1,4 +1,4 @@
-@import '@sass/variables', '@sass/font.mixins';
+@import '@sass/variables', '@sass/font.mixins', 'animate.css';
 
 .header {
   display: flex;
@@ -7,13 +7,22 @@
   margin-bottom: 30px;
 
   &__nav {
-    display: none;
+    position: absolute;
+    z-index: 1;
+    top: -500px;
+    left: 10px;
+    right: 10px;
+    border-radius: 15px;
+    background-color: #1e1e1e;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
-    @media (min-width: $sm) {
-      //display: flex;
-      //align-items: center;
-      //justify-content: space-between;
-      //gap: 32px;
+    @media (min-width: $XL) {
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
     }
   }
 
@@ -31,8 +40,12 @@
     }
     > div:last-child {
       height: 2px;
-      width: 15px;
+      width: 24px;
       background-color:  $Secondary;
+    }
+
+    @media (min-width: $XL) {
+      display: none;
     }
   }
 
@@ -43,4 +56,15 @@
     //  background-color:  $Secondary;
     //}
 
+}
+
+
+@keyframes openHeader {
+  from {
+    top: -500px;
+  }
+
+  to {
+    top: 30px;
+  }
 }
