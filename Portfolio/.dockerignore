@@ -1,10 +1,12 @@
+/.idea
+/.git
 /node_modules
+/build
+
 Dockerfile
 README.md
 .gitignore
-/.idea
-/.git
 .editorconfig
 TODO.md
 makefile
-/build
+
