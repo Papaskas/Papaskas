@@ -27,4 +27,8 @@
       color: $Secondary;
     }
   }
+
+  @media (min-width: $lg) {
+    flex-direction: row;
+  }
 }

@@ -18,12 +18,6 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-
-    @media (min-width: $XL) {
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-    }
   }
 
   &__nav_burger {
@@ -43,28 +37,24 @@
       width: 24px;
       background-color:  $Secondary;
     }
+  }
 
-    @media (min-width: $XL) {
+  @media (min-width: $lg) {
+    &__nav {
+      position: static;
+      background-color: transparent;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+
+      &__links {
+        display: none;
+      }
+    }
+
+    &__nav_burger {
       display: none;
     }
-  }
-
-    //&::after {
-    //  content: " ";
-    //  height: 20px;
-    //  width: 15px;
-    //  background-color:  $Secondary;
-    //}
-
-}
-
-
-@keyframes openHeader {
-  from {
-    top: -500px;
-  }
-
-  to {
-    top: 30px;
   }
 }

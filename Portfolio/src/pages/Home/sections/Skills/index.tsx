@@ -38,7 +38,7 @@ function Index() {
             <SkillComponent title="database">MySQL PostgreSQL MongoDB Redis SQLite</SkillComponent>
             <SkillComponent title="frontend">Sass PixelPerfect Bootstrap Photoshop BEM Illustrator Figma MobileFirst</SkillComponent>
             <SkillComponent title="stack">React TypeScript Express MongoDB</SkillComponent>
-            <SkillComponent title="frameworks">React Angular Laravel Django</SkillComponent>
+            <SkillComponent title="frameworks">React Angular Next Laravel Django</SkillComponent>
             <SkillComponent title="tools">Git Ubuntu Bash Yarn SSH Docker Apache Nginx</SkillComponent>
           </div>
 

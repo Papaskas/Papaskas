@@ -45,7 +45,7 @@ function Index() {
           <div className={ css.header__nav } ref={ refNav }>
             <NavComponent />
             <LangComponent />
-            <Links size={45} />
+            <Links size={45} className={ css.header__nav__links } />
           </div>
 
         </div>

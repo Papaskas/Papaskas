@@ -5,27 +5,32 @@
   position: relative;
   display: inline-block;
 
-
   &__button {
     display: flex;
     align-items: center;
     gap: 5px;
-    background-color: $BG;
+
     cursor: pointer;
-    @include p16sb;
+    @include h32sb;
     color: $Gray;
 
     &_active { color: $Secondary; }
 
-    img { transition: all 500ms ease-in-out; }
+    img { transition: all 150ms ease-in-out; }
     &__img_active { transform: rotate(0.5turn); }
+
+    @media (min-width: $lg) {
+      @include p16sb;
+    }
   }
 
   &__item_wrapper {
     display: none;
-    position: absolute;
+    position: sticky;
+    right: 0;
     z-index: 1;
     border: 1px solid $Gray;
+    @include h32sb;
 
     > * {
       padding: 8px;
@@ -35,9 +40,14 @@
         color: $Secondary;
       }
     }
+
+    @media (min-width: $lg) {
+      position: absolute;
+      @include p16sb;
+    }
   }
 }
 
 .show {
-  display:block;
+  display: block;
 }

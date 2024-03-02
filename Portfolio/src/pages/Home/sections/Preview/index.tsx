@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@src/components/Container';
 import Button from '@src/components/Button';
 import { useNavigate } from 'react-router-dom';
+import BinAnimation from '@src/components/Animations/Bin.animation';
 import big_logo from '@src/assets/icons/logo/big_logo_2.svg';
 import css from './style.module.scss';
 
@@ -11,8 +12,9 @@ function Index() {
 
   return (
     <section>
-      <Container>
-        <div className={ css.preview }>
+      <Container className={ css.preview }>
+
+        {/*<h1><BinAnimation>Павел</BinAnimation></h1>*/}
 
           <div className={ css.preview__heading }>
             <h1 className={ css.preview__heading_title }>Hello! My name is <span>Pavel</span> and i'm a <span>web developer</span></h1>
@@ -23,7 +25,6 @@ function Index() {
             <img src={ big_logo.toString() } alt="big logo" />
           </div>
 
-        </div>
       </Container>
     </section>
   );

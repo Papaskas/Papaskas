@@ -25,10 +25,11 @@ const Link = ({ href, img, alt, size }: Readonly<TLink>) => (
 type TLinks = {
   direction?: 'column' | 'row';
   size?: number;
+  className?: string;
 }
-function Index({ direction = 'row', size }: Readonly<TLinks>) {
+function Index({ direction = 'row', size, className }: Readonly<TLinks>) {
   return (
-    <div className={ css.fixed_links } style={{ flexDirection: direction }}>
+    <div className={ css.fixed_links + ' ' + className } style={{ flexDirection: direction }}>
       <Link size={size} href="https://github.com/Papaskas" img={ github.toString() } alt="Github" />
       <Link size={size} href="https://t.me/Papaskas" img={ telegram.toString() } alt="Telegram" />
       <Link size={size} href="mailto:papaskaaaa@gmail.com" img={ email.toString() } alt="papaskaaaa@gmail.com" />

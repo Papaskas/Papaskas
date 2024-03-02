@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './style.module.scss';
+import InView from '@src/components/Animations/InView';
 
 
 type TSkill = {
@@ -8,10 +9,12 @@ type TSkill = {
 }
 function Index({ title, children }: Readonly<TSkill>) {
   return (
-    <div className={ css.skill }>
-      <h3 className={ css.skill__title }>{ title }</h3>
-      <p className={ css.skill__skills }>{ children }</p>
-    </div>
+    <InView animateName='animate__bounceInLeft'>
+      <div className={ css.skill }>
+        <h3 className={ css.skill__title }>{ title }</h3>
+        <p className={ css.skill__skills }>{ children }</p>
+      </div>
+    </InView>
   );
 }
 

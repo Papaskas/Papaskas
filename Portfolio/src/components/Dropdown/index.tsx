@@ -6,7 +6,7 @@ import css from './style.module.scss';
 
 type TDropdown = {
   title: string;
-  children: JSX.Element[];
+  children: JSX.Element[] | JSX.Element;
 }
 function Index({ title, children }: Readonly<TDropdown>) {
   const [isActive, setActive] = useState(false);
