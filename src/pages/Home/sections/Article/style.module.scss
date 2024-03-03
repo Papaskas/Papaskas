@@ -1,0 +1,67 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.article {
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 0;
+    padding: 16px;
+    position: relative;
+    border: 1px solid $Gray;
+
+    @include h24m;
+    color: $Secondary;
+
+    &::after {
+      content: url('../../../../assets/icons/gray/quotes.svg');
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: -15px 0 0 11px;
+    }
+
+    @media (min-width: $md) {
+      padding: 32px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    padding: 16px;
+    position: relative;
+    align-self: flex-end;
+    white-space: normal;
+    border-left: 1px solid $Gray;
+    border-right: 1px solid $Gray;
+    border-bottom: 1px solid $Gray;
+
+    @include p24r;
+    color: $Secondary;
+
+    &::after {
+      content: url('../../../../assets/icons/gray/quotes.svg');
+      position: absolute;
+      margin: -30px 0 0 -45px;
+    }
+  }
+}
+
+.background_cube {
+  display: none;
+
+  @media (min-width: $XL) {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-top: 14px;
+    width: 90px;
+    height: 90px;
+    border-top: 1px solid $Gray;
+    border-bottom: 1px solid $Gray;
+    border-left: 1px solid $Gray;
+  }
+}

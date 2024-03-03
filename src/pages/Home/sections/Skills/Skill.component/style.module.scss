@@ -1,0 +1,30 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.skill {
+  max-width: 300px;
+  width: 100%;
+
+  &__title {
+    @include p16sb;
+    color: $Secondary;
+    text-transform: capitalize;
+
+    padding: 8px;
+    border: 1px solid $Gray;
+    margin: 0;
+  }
+
+  &__skills {
+    @include p16r;
+
+    padding: 8px;
+    border-right: 1px solid $Gray;
+    border-left: 1px solid $Gray;
+    border-bottom: 1px solid $Gray;
+    margin: 0;
+  }
+
+  @media (min-width: $md) {
+    max-width: 200px;
+  }
+}

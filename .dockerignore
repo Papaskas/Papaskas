@@ -1,0 +1,12 @@
+/.idea
+/.git
+/node_modules
+/build
+
+Dockerfile
+README.md
+.gitignore
+.editorconfig
+TODO.md
+makefile
+

@@ -1,0 +1,30 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+
+  &__title {
+    transition: color 250ms ease-in-out;
+    @include p16b;
+    color: $Secondary;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    content: url('../../../assets/icons/logo/logo.svg');
+
+    transition: transform 250ms ease-in-out;
+  }
+
+  &:hover &__title {
+    color: $Primary;
+  }
+  &:hover &__icon {
+    transform: rotate(0.5turn) scale(1.5);
+    content: url('../../../assets/icons/logo/logo_hover.svg');
+  }
+}

@@ -1,0 +1,60 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    cursor: pointer;
+    @include h32sb;
+    color: $Gray;
+
+    &_active {
+      color: $Secondary;
+    }
+
+    img {
+      transition: all 150ms ease-in-out;
+    }
+    &__img_active {
+      transform: rotate(0.5turn);
+    }
+
+    @media (min-width: $lg) {
+      @include p16sb;
+    }
+  }
+
+  &__item_wrapper {
+    display: none;
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    border: 1px solid $Gray;
+    @include h32sb;
+
+    > * {
+      padding: 8px;
+      cursor: pointer;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $Secondary;
+      }
+    }
+
+    @media (min-width: $lg) {
+      position: absolute;
+      @include p16sb;
+    }
+  }
+}
+
+.show {
+  display: block;
+}

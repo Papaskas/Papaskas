@@ -1,0 +1,56 @@
+@mixin p16r {
+  font-family: 'FiraCode', monospace;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+@mixin p16m {
+  font-family: 'FiraCode', monospace;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+}
+@mixin p16sb {
+  font-family: 'FiraCode', monospace;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+}
+@mixin p16b {
+  font-family: 'FiraCode', monospace;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+}
+@mixin p24r {
+  font-family: 'FiraCode', monospace;
+  font-optical-sizing: auto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
+@mixin h24m {
+  font-family: 'FiraCode', monospace;
+  font-optical-sizing: auto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+@mixin h32m {
+  font-family: 'FiraCode', monospace;
+  font-optical-sizing: auto;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+}
+@mixin h32sb {
+  font-family: 'FiraCode', monospace;
+  font-optical-sizing: auto;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+}

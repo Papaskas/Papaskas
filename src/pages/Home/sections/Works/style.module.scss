@@ -1,0 +1,25 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.works__background_cube {
+  display: none;
+
+  @media (min-width: $XXL) {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-top: 300px;
+    width: 70px;
+    height: 155px;
+    border-top: 1px solid $Gray;
+    border-bottom: 1px solid $Gray;
+    border-left: 1px solid $Gray;
+  }
+}

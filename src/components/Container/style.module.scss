@@ -1,0 +1,26 @@
+@import '@sass/variables';
+
+.container {
+  padding: 0 15px;
+  width: calc(100% - 30px); // width - padding
+  margin: auto;
+
+  @media (min-width: $md) {
+    max-width: $md;
+  }
+  @media (min-width: $lg) {
+    max-width: $lg;
+  }
+  @media (min-width: $XL) {
+    max-width: $XL;
+  }
+  @media (min-width: $XXL) {
+    max-width: $XXL;
+  }
+
+  &_fluid {
+    max-width: $XXXL;
+    width: 100%;
+    margin: auto;
+  }
+}

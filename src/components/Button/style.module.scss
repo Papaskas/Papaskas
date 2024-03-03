@@ -1,0 +1,53 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+@mixin genPseudoBtn($Color) {
+  &:hover {
+    background-color: rgba($Color, 0.3);
+  }
+
+  &:focus,
+  &:active {
+    background-color: rgba($Color, 0.3);
+
+    &::before {
+      content: '#';
+      color: $Color;
+    }
+  }
+
+  &:disabled,
+  &[disabled] {
+    border: 1px solid $Gray;
+    background-color: $Gray;
+    color: $Secondary;
+
+    &::before {
+      content: '';
+    }
+  }
+}
+
+.button {
+  @include p16m;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 250ms;
+
+  &_secondary {
+    border: 1px solid $Gray;
+    color: $Gray;
+    @include genPseudoBtn($Gray);
+  }
+
+  &_primary {
+    border: 1px solid $Primary;
+    color: $Secondary;
+    @include genPseudoBtn($Primary);
+  }
+
+  &_error {
+    border: 1px solid $Error;
+    color: $Secondary;
+    @include genPseudoBtn($Error);
+  }
+}
