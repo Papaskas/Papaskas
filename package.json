@@ -27,7 +27,8 @@
     "esLint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "prettier": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
     "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
-    "isReady": "yarn run esLint && yarn run prettier && yarn run format && yarn run build"
+    "isReady": "yarn run esLint && yarn run prettier && yarn run format && yarn run build",
+    "prepare": "husky"
   },
   "husky": {
     "hooks": {
@@ -83,6 +84,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-webpack-plugin": "^4.0.1",
+    "husky": "^9.0.11",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "prettier-eslint": "^16.3.0",
