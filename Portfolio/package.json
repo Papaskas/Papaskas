@@ -24,10 +24,16 @@
     "serve": "serve -s build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+    "esLint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+    "prettier": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
     "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
-    "isReady": "yarn run format && yarn run lint && yarn run build",
+    "isReady": "yarn run esLint && yarn run prettier && yarn run format && yarn run build",
     "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run esLint && yarn run prettier && yarn run format && git add -A ."
+    }
   },
   "eslintConfig": {
     "extends": [
