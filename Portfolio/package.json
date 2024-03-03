@@ -27,8 +27,7 @@
     "esLint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "prettier": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
     "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
-    "isReady": "yarn run esLint && yarn run prettier && yarn run format && yarn run build",
-    "prepare": "husky"
+    "isReady": "yarn run esLint && yarn run prettier && yarn run format && yarn run build"
   },
   "husky": {
     "hooks": {
