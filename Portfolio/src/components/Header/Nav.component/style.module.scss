@@ -13,8 +13,8 @@
     list-style: none;
     @include h32m;
 
-    @media(min-width: $lg) {
-      @include p16m;
+    @media (min-width: $lg) {
+      @include p16r;
     }
   }
 
@@ -25,6 +25,11 @@
 
     &:hover {
       color: $Secondary;
+    }
+
+    &::before {
+      content: '#';
+      color: $Primary;
     }
   }
 

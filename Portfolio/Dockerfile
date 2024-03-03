@@ -8,7 +8,7 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn run build
+RUN yarn run isReady
 
 FROM nginx:1.25.4 AS prod
 

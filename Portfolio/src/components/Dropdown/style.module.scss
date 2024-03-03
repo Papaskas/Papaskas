@@ -1,6 +1,5 @@
 @import '@sass/variables', '@sass/font.mixins';
 
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -14,10 +13,16 @@
     @include h32sb;
     color: $Gray;
 
-    &_active { color: $Secondary; }
+    &_active {
+      color: $Secondary;
+    }
 
-    img { transition: all 150ms ease-in-out; }
-    &__img_active { transform: rotate(0.5turn); }
+    img {
+      transition: all 150ms ease-in-out;
+    }
+    &__img_active {
+      transform: rotate(0.5turn);
+    }
 
     @media (min-width: $lg) {
       @include p16sb;
@@ -36,7 +41,9 @@
       padding: 8px;
       cursor: pointer;
 
-      &:hover, &:active, &:focus {
+      &:hover,
+      &:active,
+      &:focus {
         color: $Secondary;
       }
     }

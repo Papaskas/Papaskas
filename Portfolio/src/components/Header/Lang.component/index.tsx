@@ -1,6 +1,5 @@
-import React from 'react';
-import Dropdown from '@src/components/Dropdown';
-
+import React from 'react'
+import Dropdown from '@src/components/Dropdown'
 
 function Index() {
   return (
@@ -8,7 +7,7 @@ function Index() {
       <div>RU</div>
       <div>EN</div>
     </Dropdown>
-  );
+  )
 }
 
-export default Index;
+export default Index

@@ -1,12 +1,12 @@
 @import '@sass/variables', '@sass/font.mixins';
 
-
-@mixin genPseudoBtn ($Color) {
+@mixin genPseudoBtn($Color) {
   &:hover {
     background-color: rgba($Color, 0.3);
   }
 
-  &:focus, &:active {
+  &:focus,
+  &:active {
     background-color: rgba($Color, 0.3);
 
     &::before {
@@ -15,7 +15,8 @@
     }
   }
 
-  &:disabled, &[disabled] {
+  &:disabled,
+  &[disabled] {
     border: 1px solid $Gray;
     background-color: $Gray;
     color: $Secondary;

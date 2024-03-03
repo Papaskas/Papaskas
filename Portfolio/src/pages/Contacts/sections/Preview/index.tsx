@@ -1,13 +1,7 @@
-import React from 'react';
-import css from './style.module.scss';
-
+import React from 'react'
 
 function Index() {
-  return (
-    <section>
-
-    </section>
-  );
+  return <section></section>
 }
 
-export default Index;
+export default Index

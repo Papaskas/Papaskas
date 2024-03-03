@@ -1,7 +1,6 @@
-import React from 'react';
-import PageHeading from '@src/components/PageHeading';
-import Preview from './sections/Preview';
-
+import React from 'react'
+import PageHeading from '@src/components/PageHeading'
+import Preview from './sections/Preview'
 
 function Index() {
   return (
@@ -9,7 +8,7 @@ function Index() {
       <PageHeading>contacts</PageHeading>
       <Preview />
     </main>
-  );
+  )
 }
 
-export default Index;
+export default Index

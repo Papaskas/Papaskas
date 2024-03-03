@@ -1,7 +1,6 @@
 @import '@sass/variables', '@sass/font.mixins';
 
 .preview {
-
   &__heading {
     max-width: 450px;
     margin: auto;
@@ -10,10 +9,14 @@
       @include h32sb;
       color: $Secondary;
 
-      > span { color: $Primary; }
+      > span {
+        color: $Primary;
+      }
     }
 
-    &_description { @include p16r; }
+    &_description {
+      @include p16r;
+    }
   }
 
   &__img {
@@ -36,6 +39,8 @@
     display: flex;
     padding: 0 35px;
 
-    &__img { display: block; }
+    &__img {
+      display: block;
+    }
   }
 }
