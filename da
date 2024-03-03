@@ -1,0 +1,249 @@
+[33mcommit 5055eb5e005ec97341ab642acb2e798e33e3fbc9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mPortfolio[m[33m)[m
+Author: papaskas <pavel.glugxix@gmail.com>
+Date:   Sun Mar 3 15:42:55 2024 +0300
+
+    remove portfolio branch
+
+[1mdiff --git a/.dockerignore b/.dockerignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..41f768c[m
+[1m--- /dev/null[m
+[1m+++ b/.dockerignore[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m/.idea[m
+[32m+[m[32m/.git[m
+[32m+[m[32m/node_modules[m
+[32m+[m[32m/build[m
+[32m+[m
+[32m+[m[32mDockerfile[m
+[32m+[m[32mREADME.md[m
+[32m+[m[32m.gitignore[m
+[32m+[m[32m.editorconfig[m
+[32m+[m[32mTODO.md[m
+[32m+[m[32mmakefile[m
+[32m+[m
+[1mdiff --git a/.editorconfig b/.editorconfig[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9bcbf63[m
+[1m--- /dev/null[m
+[1m+++ b/.editorconfig[m
+[36m@@ -0,0 +1,26 @@[m
+[32m+[m[32mroot = true[m
+[32m+[m
+[32m+[m[32m[*][m
+[32m+[m[32mcharset = utf-8[m
+[32m+[m[32mend_of_line = crlf[m
+[32m+[m[32mindent_size = 4[m
+[32m+[m[32mindent_style = space[m
+[32m+[m[32minsert_final_newline = false[m
+[32m+[m[32mmax_line_length = 160[m
+[32m+[m[32mtab_width = 4[m
+[32m+[m
+[32m+[m[32m[{*.scss,*.sass,*.css}][m
+[32m+[m[32mindent_size = 2[m
+[32m+[m[32mtab_width = 2[m
+[32m+[m
+[32m+[m[32m[{*.ats,*.cts,*.mts,*.ts,*.tsx,*.js,*.jsx,*.cjs,*.mjs}][m
+[32m+[m[32mindent_size = 2[m
+[32m+[m[32mtab_width = 2[m
+[32m+[m
+[32m+[m[32m[{*.har,*.jsb2,*.jsb3,*.json,.babelrc,.eslintrc,.prettierrc,.stylelintrc,bowerrc,jest.config}][m
+[32m+[m[32mindent_size = 2[m
+[32m+[m[32mtab_width = 2[m
+[32m+[m
+[32m+[m[32m[{*.htm,*.html,*.ng,*.sht,*.shtm,*.shtml}][m
+[32m+[m[32mindent_size = 2[m
+[32m+[m[32mtab_width = 2[m
+[1mdiff --git a/.eslintignore b/.eslintignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3ff5413[m
+[1m--- /dev/null[m
+[1m+++ b/.eslintignore[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32mbuild/*[m
+[32m+[m[32mpublic/*[m
+[32m+[m[32mdocs/*[m
+[32m+[m[32mtemplates/*[m
+[32m+[m[32msrc/react-app-env.d.ts[m
+[32m+[m[32msrc/serviceWorker.ts[m
+\ No newline at end of file[m
+[1mdiff --git a/.eslintrc b/.eslintrc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..368070f[m
+[1m--- /dev/null[m
+[1m+++ b/.eslintrc[m
+[36m@@ -0,0 +1,77 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "plugins": ["prettier", "@typescript-eslint"],[m
+[32m+[m[32m  "extends": ["airbnb-typescript", "react-app", "prettier"],[m
+[32m+[m[32m  "parser": "@typescript-eslint/parser",[m
+[32m+[m[32m  "parserOptions": {[m
+[32m+[m[32m    "project": "./tsconfig.json"[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "settings": {[m
+[32m+[m[32m    "import/resolver": {[m
+[32m+[m[32m      "typescript": {[m
+[32m+[m[32m        "alwaysTryTypes": true[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "rules": {[m
+[32m+[m[32m    "object-curly-spacing": ["warn", "always"],[m
+[32m+[m[32m    "no-unused-vars": [[m
+[32m+[m[32m      "warn",[m
+[32m+[m[32m      {[m
+[32m+[m[32m        "vars": "all",[m
+[32m+[m[32m        "args": "none"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "@typescript-eslint/semi": [[m
+[32m+[m[32m      "off"[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "@typescript-eslint/no-unused-vars": [[m
+[32m+[m[32m      "warn",[m
+[32m+[m[32m      {[m
+[32m+[m[32m        "vars": "all",[m
+[32m+[m[32m        "args": "none"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "@typescript-eslint/no-explicit-any": [[m
+[32m+[m[32m      "error",[m
+[32m+[m[32m      {[m
+[32m+[m[32m        "ignoreRestArgs": true[m
+[32m+[m[32m      }[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "max-len": [[m
+[32m+[m[32m      "warn",[m
+[32m+[m[32m      {[m
+[32m+[m[32m        "code": 160,[m
+[32m+[m[32m        "ignoreStrings": true,[m
+[32m+[m[32m        "ignoreTemplateLiterals": true,[m
+[32m+[m[32m        "ignoreComments": true[m
+[32m+[m[32m      }[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "no-plusplus": [[m
+[32m+[m[32m      "error",[m
+[32m+[m[32m      {[m
+[32m+[m[32m        "allowForLoopAfterthoughts": true[m
+[32m+[m[32m      }[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "react/jsx-key": "error",[m
+[32m+[m[32m    "import/no-extraneous-dependencies": [[m
+[32m+[m[32m      "error",[m
+[32m+[m[32m      {[m
+[32m+[m[32m        "devDependencies": [[m
+[32m+[m[32m          "**/*.test.js",[m
+[32m+[m[32m          "**/*.test.jsx",[m
+[32m+[m[32m          "**/*.test.ts",[m
+[32m+[m[32m          "**/*.test.tsx",[m
+[32m+[m[32m          "src/tests/**/*"[m
+[32m+[m[32m        ][m
+[32m+[m[32m      }[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    "react/jsx-props-no-spreading": "off",[m
+[32m+[m[32m    "import/prefer-default-export": "off",[m
+[32m+[m[32m    "react/jsx-boolean-value": "off",[m
+[32m+[m[32m    "react/prop-types": "off",[m
+[32m+[m[32m    "react/no-unescaped-entities": "off",[m
+[32m+[m[32m    "react/jsx-one-expression-per-line": "off",[m
+[32m+[m[32m    "react/jsx-wrap-multilines": "off",[m
+[32m+[m[32m    "react/destructuring-assignment": "off"[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dfc0b95[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,27 @@[m
+[32m+[m[32m# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.[m
+[32m+[m
+[32m+[m[32m# dependencies[m
+[32m+[m[32m/node_modules[m
+[32m+[m[32m/.pnp[m
+[32m+[m[32m.pnp.js[m
+[32m+[m
+[32m+[m[32m# testing[m
+[32m+[m[32m/coverage[m
+[32m+[m
+[32m+[m[32m# production[m
+[32m+[m[32m/build[m
+[32m+[m
+[32m+[m[32m# misc[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32m.env.local[m
+[32m+[m[32m.env.development.local[m
+[32m+[m[32m.env.test.local[m
+[32m+[m[32m.env.production.local[m
+[32m+[m
+[32m+[m[32mnpm-debug.log*[m
+[32m+[m[32myarn-debug.log*[m
+[32m+[m[32myarn-error.log*[m
+[32m+[m
+[32m+[m[32m/.idea[m
+[32m+[m[32mTODO.md[m
+[32m+[m[32mautobiography.txt[m
+\ No newline at end of file[m
+[1mdiff --git a/.prettierrc b/.prettierrc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1d9d9fe[m
+[1m--- /dev/null[m
+[1m+++ b/.prettierrc[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "trailingComma": "es5",[m
+[32m+[m[32m  "printWidth": 160,[m
+[32m+[m[32m  "semi": false,[m
+[32m+[m[32m  "singleQuote": true,[m
+[32m+[m[32m  "tabWidth": 2[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/Dockerfile b/Dockerfile[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b1abc5f[m
+[1m--- /dev/null[m
+[1m+++ b/Dockerfile[m
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32mFROM node:20.10 AS build[m
+[32m+[m
+[32m+[m[32mWORKDIR /app[m
+[32m+[m
+[32m+[m[32mCOPY package.json yarn.lock ./[m
+[32m+[m
+[32m+[m[32mRUN yarn install[m
+[32m+[m
+[32m+[m[32mCOPY . .[m
+[32m+[m
+[32m+[m[32mRUN yarn run isReady[m
+[32m+[m
+[32m+[m[32mFROM nginx:1.25.4 AS prod[m
+[32m+[m
+[32m+[m[32mRUN rm -rf /usr/share/nginx/html/*[m
+[32m+[m
+[32m+[m[32mCOPY --from=build /app/build /usr/share/nginx/html[m
+[32m+[m[32mCOPY nginx.conf /etc/nginx/nginx.conf[m
+[32m+[m
+[32m+[m[32mEXPOSE 80/tcp[m
+[32m+[m
+[32m+[m[32mCMD ["/usr/sbin/nginx", "-g", "daemon off;"][m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/craco.config.js b/craco.config.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2825d5f[m
+[1m--- /dev/null[m
+[1m+++ b/craco.config.js[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mconst path = require('path');[m
+[32m+[m
+[32m+[m
+[32m+[m[32mmodule.exports = {[m
+[32m+[m[32m  webpack: {[m
+[32m+[m[32m    alias: {[m
+[32m+[m[32m      '@src': path.resolve(__dirname, './src'),[m
+[32m+[m[32m      '@sass': path.resolve(__dirname, './src/core/sass'),[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+[32m+
