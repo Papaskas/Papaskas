@@ -1,6 +1,6 @@
 import React from 'react'
-import Container from '@src/components/Container'
 import Button from '@src/components/Button'
+import Container from '@src/components/Container'
 import bigLogo from '@src/assets/icons/logo/big_logo_2.svg'
 import css from './style.module.scss'
 import { ENV } from '@src/ENV'
