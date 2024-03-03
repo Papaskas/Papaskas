@@ -1,1 +1,3 @@
 yarn esLint
+yarn prettier
+yarn format
