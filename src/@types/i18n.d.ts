@@ -1,13 +1,11 @@
-import { defaultNS } from '@src/i18n'
-import en from '@src/core/locales/en.json'
-import ru from '@src/core/locales/ru.json'
+import en from '../../public/locales/en-US/translation.json'
+import ru from '../../public/locales/ru-RU/translation.json'
 
 declare module 'i18next' {
   interface CustomTypeOptions {
-    defaultNS: typeof defaultNS
     resources: {
-      en: typeof en
-      ru: typeof ru
+      'en-US': typeof en
+      'ru-RU': typeof ru
     }
   }
 }

@@ -6,7 +6,7 @@ import Works from '@src/pages/Works'
 import AboutMe from '@src/pages/AboutMe'
 import Contacts from '@src/pages/Contacts'
 import NotFound from '@src/pages/NotFound'
-import { ENV } from '@src/ENV'
+import { ENV } from '@src/env'
 
 function Router() {
   return (

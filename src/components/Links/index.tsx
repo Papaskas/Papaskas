@@ -3,7 +3,7 @@ import css from './style.module.scss'
 import email from '@src/assets/icons/secondary/Email.svg'
 import github from '@src/assets/icons/secondary/Github.svg'
 import telegram from '@src/assets/icons/secondary/Telegram.svg'
-import { ENV } from '../../ENV'
+import { ENV } from '@src/env'
 
 type TLink = {
   href: string

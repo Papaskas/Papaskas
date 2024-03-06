@@ -1,18 +1,14 @@
 import i18next from 'i18next'
+import Backend from 'i18next-http-backend'
+import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
-import en from '@src/core/locales/en.json'
-import ru from '@src/core/locales/ru.json'
+import { ENV } from '@src/env'
 
-export const defaultNS = 'en'
-
-i18next.use(initReactI18next).init({
-  debug: true,
-  fallbackLng: 'en',
-  defaultNS,
-  resources: {
-    en,
-    ru,
-  },
+i18next.use(Backend).use(LanguageDetector).use(initReactI18next).init({
+  debug: ENV.DEBUG,
+  fallbackLng: 'en-US',
+  lowerCaseLng: true,
+  cleanCode: true,
 })
 
 export default i18next

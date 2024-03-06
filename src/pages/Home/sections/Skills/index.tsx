@@ -5,12 +5,15 @@ import SkillComponent from '@src/pages/Home/sections/Skills/Skill.component'
 import logoOutline from '@src/assets/icons/logo/logo_outline.svg'
 import cubeDots from '@src/assets/icons/gray/CubeDots.svg'
 import css from './style.module.scss'
+import { useTranslation } from 'react-i18next'
 
 function Index() {
+  const { t } = useTranslation()
+
   return (
     <section>
       <Container>
-        <SectionHeading>Skills</SectionHeading>
+        <SectionHeading>{t('sectionTitle.skills')}</SectionHeading>
 
         <div className={css.skills}>
           <div className={css.skills__background}>

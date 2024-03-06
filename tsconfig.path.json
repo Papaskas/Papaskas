@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@src/*": ["./*"],
-      "@sass/*": ["./core/sass/*"]
+      "@src/*": ["./src/*"],
+      "@sass/*": ["./src/core/sass/*"]
     }
   }
 }

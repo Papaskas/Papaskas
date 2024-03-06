@@ -1,0 +1,53 @@
+{
+  "me": {
+    "name": "Pavel",
+    "education": "Lower post-secondary vocational education",
+    "profession": "web developer"
+  },
+  "header": {
+    "lang": "Lang",
+    "links": {
+      "home": "home",
+      "works": "works",
+      "about-me": "about-me",
+      "contacts": "contacts"
+    }
+  },
+  "footer": {
+    "media": "Media"
+  },
+  "sectionTitle": {
+    "skills": "Skills",
+    "works": "Works"
+  },
+  "worksCards": {
+    "Papaska": {
+      "description": "You use it"
+    },
+    "Forbus": {
+      "description": "Website in the format of a system of thematic collective blogs with elements of a news site"
+    },
+    "WireGuard": {
+      "description": "WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler"
+    },
+    "Secretum": {
+      "description": "Pseudo an online platform that is used for communication, dating, creating social relationships between people"
+    }
+  },
+  "pages": {
+    "home": {
+      "preview": {
+        "title": {
+          "1": "Hello! My name is ",
+          "2": " and i'm a "
+        },
+        "description": "Organized, with deep knowledge of TypeScript and React. I have experience in Fullstack development: Express, Laravel, Django. I show initiative in software development and code optimization. I read technical literature and like to understand different technologies",
+        "button": "Contact me !!"
+      },
+      "article": {
+        "author_say": "Let's grab relay and stash it inside our jacket and walk quickly past the guards",
+        "author": "Charles Petzold"
+      }
+    }
+  }
+}

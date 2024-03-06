@@ -38,6 +38,7 @@
     @include h32sb;
 
     > * {
+      color: $Gray;
       padding: 8px;
       cursor: pointer;
 
