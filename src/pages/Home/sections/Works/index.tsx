@@ -57,7 +57,6 @@ function Index() {
               technologies={el.technologies}
               title={el.title}
               description={t(`worksCards.${el.description}.description`)}
-              //description={el.description}
               urlToLive={el.urlToLive}
               urlToGithub={el.urlToGithub}
             />
