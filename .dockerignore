@@ -4,6 +4,7 @@
 /.husky
 /node_modules
 /build
+/coverage
 
 Dockerfile
 README.md

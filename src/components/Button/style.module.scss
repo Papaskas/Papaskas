@@ -17,9 +17,9 @@
 
   &:disabled,
   &[disabled] {
-    border: 1px solid $Gray;
-    background-color: $Gray;
-    color: $Secondary;
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #000000;
 
     &::before {
       content: '';
@@ -36,18 +36,18 @@
   &_secondary {
     border: 1px solid $Gray;
     color: $Gray;
-    @include genPseudoBtn($Gray);
+    @include genPseudoBtn(#000000);
   }
 
   &_primary {
     border: 1px solid $Primary;
     color: $Secondary;
-    @include genPseudoBtn($Primary);
+    @include genPseudoBtn(#000000);
   }
 
   &_error {
-    border: 1px solid $Error;
-    color: $Secondary;
-    @include genPseudoBtn($Error);
+    border: 1px solid #000000;
+    color: #000000;
+    @include genPseudoBtn(#000000);
   }
 }

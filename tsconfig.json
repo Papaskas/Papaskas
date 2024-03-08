@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["@testing-library/jest-dom", "jest", "node"],
     "target": "es5",
     "lib": [
       "dom",
