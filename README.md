@@ -1,1 +1,0 @@
-<img src="./Resume/Resume__android.png" alt="Resume papaska dev" />
